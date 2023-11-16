@@ -1,0 +1,161 @@
+input {
+    outline: none;
+    border: none;
+    display:block;
+    line-height: 1.2em;
+    font-size: 14pt;
+  }
+select{
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.full-input {
+    display: inline-block;
+    padding: 3px;
+}
+#heading{
+    font-size: 50px;
+    color: rgb(65, 65, 65);
+}
+#table{
+    margin-left: 480px;
+    padding: -5px;
+    margin-bottom: -40px;
+    margin-top: -10px;
+    width: 42%;
+}
+#c1{
+    width: 150px;
+}
+#c2{
+    width: 450px;
+}
+#c3{
+    background-color: rgb(159, 9, 182);
+    color: aliceblue;
+    width: 150px;
+    padding: 25px;
+    margin-top: -1px;
+    text-align: center;
+    font-size: larger;
+}
+#c4{
+    background-color: rgb(222, 188, 37);
+    color: aliceblue;
+    width: 150px;
+    padding: 25px;
+    margin-top: -1px;
+    text-align: center;
+    font-size: larger;
+}
+#c5{
+    background-color: rgb(194, 78, 78);
+    color: aliceblue;
+    width: 150px;
+    padding: 25px;
+    margin-top: -1px;
+    text-align: center;
+    font-size: larger;
+}
+#c6{
+    background-color: rgb(33, 67, 152);
+    color: aliceblue;
+    width: 150px;
+    padding: 25px;
+    margin-top: -1px;
+    text-align: center;
+    font-size: larger;
+}
+#c7{
+    background-color: rgb(18, 121, 26);
+    color: aliceblue;
+    width: 150px;
+    padding: 25px;
+    margin-top: -1px;
+    text-align: center;
+    font-size: larger;
+}
+#c8{
+    color: aliceblue;
+    width: 150px;
+    padding: 25px;
+    margin-top: -1px;
+    text-align: center;
+    font-size: larger;
+}
+#cat{
+    padding: 10px;
+    width: 220%;
+    display: inline-block;
+    font-size: large;
+}
+#catid{
+    font-weight: 900;
+}
+#addbutton{
+    align-items: center;
+    margin-left:21%;
+    padding: 25px;
+    width: 27%;
+    background-color: rgb(46, 45, 45);
+    color: white;
+    font-size: larger;
+    display: inline-block;
+    margin-top: 50px;
+    font-weight: 500;
+    padding-left: 55px;
+}
+#add1{
+    margin-left: -40px;
+}
+#delbutton{
+    padding: 25px;
+    margin-left: 49.5%;
+    margin-top: -55px;
+    width: 15%;
+    background-color: orangered;
+    color: white;
+    font-size: larger;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+}
+#addbutton:hover{
+    background-color: black;
+}
+#delbutton:hover{
+    background-color: rgb(215, 4, 4);
+}
+#table1{
+    border-top: 1px solid rgb(205, 205, 204);
+    border-bottom: 1px solid rgb(205, 205, 204);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+#r1c1{
+    width: 100%;
+    font-weight: 900;
+}
+#table2{
+    border-bottom: 1px solid rgb(205, 205, 204);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+#r2c1,#r2c2{
+    width: 40%;
+    float:inline-end;
+    font-weight: 900;
+}
+#r2c2{
+    border-left: 1px solid rgb(205, 205, 204);
+}
+#form1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

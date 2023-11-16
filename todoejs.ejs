@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>TODO App</title>
+        <link href="/styling.css" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/2dad734a71.js" crossorigin="anonymous"></script>
+        <style>
+            input.largerCheckbox{
+                width: 30px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 align="center" id="heading">TODO App</h2>
+        <form action="add_data" method="post" style="width: 50%;margin-left: auto;margin-right: auto;">
+            <table id="table1">
+                <tbody>
+                    <tr>
+                        <td id="r1c1">
+                            <div class="full-input"><label for="name">DESCRIPTION <br></label>
+                                <input type="text" name="description" placeholder="What do you need to do?" required></input>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="table2">
+                <tbody>
+                    <tr>
+                        <td class="r2c1">
+                            <div class="full-input" id="catid"><label for="category">CATEGORY <br></label>
+                                <select name="category" id="cat">
+                                    <option>Choose a category</option>
+                                    <option>Personal</option>
+                                    <option>Work</option>
+                                    <option>School</option>
+                                    <option>Cleaning</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td id="r2c2">
+                            <div class="full-input"><label for="date">DUE DATE</label>
+                                <input type="date" name="date" id="datedrop">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre><button type="submit" id="addbutton"><div id="add1"><i class="fa-sharp fa-solid fa-plus"></i>   ADD TASK</div></button></pre>
+        </form>
+        <form action="/delete_data" method="get" id="form2">
+            <table class="table" style="width: 100%;margin-top: -50px;"></table>
+            <pre><button id="delbutton" type="submit"><i class="fa-regular fa-trash-can"></i>   DELETE TASKS</button></pre>
+                <% for(let i of data){ %>
+                    <table id="table">
+                        <td></td>
+                        <tbody>
+                                <tr>
+                                    <td id="c1"><input type="checkbox" class="largerCheckbox" name="<%=i._id %>" onchange="strikeText(this)"></td>
+                                    <td id="c2">
+                                        <h2><%= i.description %></h2>
+                                        <% if((i.date) == null){%>
+                                            <div><i class="fa-sharp fa-regular fa-calendar-days"></i>      NO DEADLINE</div>
+                                        <%} else{%>
+                                            <div><i class="fa-sharp fa-regular fa-calendar-days"></i>      <%= i.date.toDateString() %></div>
+                                        <%}%>
+                                    </td>
+                                    <td>
+                                        <% if((i.category) == "Choose a category"){%>
+                                            <div id="c8"></td><h1 align="center" style="color: rgb(180, 178, 178);">___________________________________________________</h1>
+                                        <%} else if((i.category) == "Personal"){%>
+                                            <div id="c3"><%= i.category %></div></td><h1 align="center" style="color: rgb(180, 178, 178);">___________________________________________________</h1>    
+                                        <%} else if((i.category) == "Work"){%>
+                                            <div id="c4"><%= i.category %></div></td><h1 align="center" style="color: rgb(180, 178, 178);">___________________________________________________</h1>    
+                                        <%} else if((i.category)=="School"){%>
+                                            <div id="c5"><%= i.category %></div></td><h1 align="center" style="color: rgb(180, 178, 178);">___________________________________________________</h1>    
+                                        <%} else if((i.category) == "Cleaning"){%>
+                                            <div id="c6"><%= i.category %></div></td><h1 align="center" style="color: rgb(180, 178, 178);">___________________________________________________</h1>  
+                                        <%} else{%>
+                                            <div id="c7"><%= i.category %></div></td><h1 align="center" style="color: rgb(180, 178, 178);">___________________________________________________</h1>    
+                                        <%}%>  
+                                    </td>
+                                </tr>
+                        </tbody> 
+                    </table>
+                <%} %>
+            </table>
+        </form>
+        <script>
+            function strikeText(checkbox){
+                var row = checkbox.parentNode.parentNode.parentNode.parentNode;
+                var text1 =row.getElementsByTagName("td")[1];
+                var text2=row.getElementsByTagName("td")[2];
+                if (checkbox.checked) {
+                    text1.style.textDecoration = "line-through";
+                    text2.style.textDecoration = "line-through";
+                    console.log("TASK FINISHED SUCCESFULLY");
+                } else {
+                    text1.style.textDecoration = "none";
+                    text2.style.textDecoration = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
+    
+             
